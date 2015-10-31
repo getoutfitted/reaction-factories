@@ -1,6 +1,4 @@
 # Reaction Factories
-[![Circle CI](https://circleci.com/gh/reactioncommerce/reaction-factories.svg?style=svg)](https://circleci.com/gh/reactioncommerce/reaction-factories)
-
 This is a core package of Reaction Commerce and provides
 - faker - use `faker` on client and server
 - faker.reaction - extended functions for reaction commerce
@@ -37,8 +35,7 @@ Additional custom faker methods added:
 - faker.reaction.products
 
 ```
-Factory.create("Shops")
-var shopId = Factory.get("Shops")
+shopId = faker.reaction.shops.getShop()._id;
 ```
 
 # About

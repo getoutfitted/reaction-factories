@@ -1,0 +1,6 @@
+{
+  "name": "reaction-factories",
+  "dependencies": {
+    "Faker": "3.0.1"
+  }
+}

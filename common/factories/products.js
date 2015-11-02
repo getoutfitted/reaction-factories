@@ -2,7 +2,7 @@
  * Tag Factory
  * @summary define tag Factory
  */
-Factory.define("tag", ReactionFactory.Collections.Tags, {
+Factory.define("tag", Tags, {
   name: "Tag",
   slug: "tag",
   position: _.random(0, 100000),
@@ -17,12 +17,13 @@ Factory.define("tag", ReactionFactory.Collections.Tags, {
  * Product factory
  * @summary define product Factory
  */
-Factory.define("product", ReactionFactory.Collections.Products, {
+Factory.define("product", Products, {
   shopId: faker.reaction.shops.getShop()._id,
   title: faker.commerce.productName(),
   pageTitle: faker.lorem.sentence(),
   description: faker.lorem.paragraph(),
   productType: "simple",
+  type: "simple",
   vendor: faker.company.companyName(),
   metafields: [],
   variants: [
@@ -38,9 +39,9 @@ Factory.define("product", ReactionFactory.Collections.Products, {
   // metaDescription: ?,
   // handle: ?,
   isVisible: faker.random.boolean(),
-  publishedAt: new Date,
+  publishedAt: new Date(),
   // publishedScope: ?,
   // templateSuffix: ?,
-  createdAt: new Date,
+  createdAt: new Date(),
   updatedAt: new Date()
 });

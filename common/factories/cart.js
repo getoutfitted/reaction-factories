@@ -2,7 +2,7 @@
 * Cart Factory
 * @summary define cart Factory
 */
-Factory.define("cart", ReactionFactory.Collections.Cart, {
+Factory.define("cart", Cart, {
   shopId: faker.reaction.shops.getShop()._id,
   userId: faker.reaction.users.getUser()._id,
   sessionId: Random.id(),

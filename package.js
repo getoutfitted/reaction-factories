@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Reaction Factories - reaction commerce specific factories with an extended faker implementation",
   name: "reactioncommerce:reaction-factories",
-  version: "0.1.0",
+  version: "0.2.0",
   git: "https://github.com/reactioncommerce/reaction-factories.git"
 });
 

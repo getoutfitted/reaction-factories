@@ -2,7 +2,7 @@
  * Shop Factory
  * @summary define shop Factory
  */
-Factory.define("shop", ReactionFactory.Collections.Shops, {
+Factory.define("shop", Shops, {
   name: faker.internet.domainName(),
   description: faker.company.catchPhrase(),
   keywords: faker.company.bsAdjective(),

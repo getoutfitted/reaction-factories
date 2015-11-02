@@ -3,7 +3,7 @@
  * @summary Factory for generating reaction orders
  */
 
-Factory.define("order", ReactionFactory.Collections.Orders, {
+Factory.define("order", Orders, {
   // Schemas.OrderItems
   additionalField: faker.lorem.sentence(),
   status: faker.lorem.sentence(3),
@@ -48,7 +48,7 @@ Factory.define("order", ReactionFactory.Collections.Orders, {
  * authorizedApprovedPaypalOrder Factory
  * @summary defines order factory which generates an authorized, apporved, paypal order.
  */
-Factory.define("authorizedApprovedPaypalOrder", ReactionFactory.Collections.Orders,
+Factory.define("authorizedApprovedPaypalOrder", Orders,
   Factory.extend("order", {
     billing: [{
       _id: Random.id(),

@@ -119,6 +119,7 @@ faker.reaction.productVariant = function (options = {}) {
     optionTitle: faker.commerce.productName(),
     sku: _.random(0, 6),
     taxable: faker.random.boolean(),
+    type: "variant",
     metafields: [
       faker.reaction.metaField(),
       faker.reaction.metaField({

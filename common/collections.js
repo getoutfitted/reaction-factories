@@ -1,16 +1,22 @@
-ReactionFactory = {};
-ReactionFactory.Collections = {};
+// globals not exported from package
+Cart = ReactionCore.Collections.Cart;
 
-if (typeof ReactionCore !== "undefined") {
-  ReactionFactory.Collections.Shops = new ReactionCore.Collections.Shops;
-  ReactionFactory.Collections.Tags = new ReactionCore.Collections.Tags;
-  ReactionFactory.Collections.Products = new ReactionCore.Collections.Products;
-  ReactionFactory.Collections.Orders = new ReactionCore.Collections.Orders;
-  ReactionFactory.Collections.Cart = new ReactionCore.Collections.Cart;
-} else {
-  ReactionFactory.Collections.Shops = new Mongo.Collection("FactoryShops");
-  ReactionFactory.Collections.Tags = new Mongo.Collection("FactoryTags");
-  ReactionFactory.Collections.Products = new Mongo.Collection("FactoryProducts");
-  ReactionFactory.Collections.Orders = new Mongo.Collection("FactoryOrders");
-  ReactionFactory.Collections.Cart = new Mongo.Collection("FactoryCart");
-}
+Discounts = ReactionCore.Collections.Discounts;
+
+Media = ReactionCore.Collections.Media;
+
+Orders = ReactionCore.Collections.Orders;
+
+Packages = ReactionCore.Collections.Packages;
+
+Products = ReactionCore.Collections.Products;
+
+Shipping = ReactionCore.Collections.Shipping;
+
+Shops = ReactionCore.Collections.Shops;
+
+Tags = ReactionCore.Collections.Tags;
+
+Taxes = ReactionCore.Collections.Taxes;
+
+Translations = ReactionCore.Collections.Translations;

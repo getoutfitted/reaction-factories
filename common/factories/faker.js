@@ -219,13 +219,13 @@ faker.reaction.order = {
  */
 faker.reaction.shops = {
   getShop: function () {
-    const existingShop = ReactionFactory.Collections.Shops.findOne();
+    const existingShop = Shops.findOne();
     return existingShop || Factory.create("shop");
   },
 
   getShops: function (limit = 2) {
     const shops = [];
-    const existingShops = ReactionFactory.Collections.Shops.find({}, {limit: limit}).fetch();
+    const existingShops = Shops.find({}, {limit: limit}).fetch();
     for (let i = 0; i < limit; i = i + 1) {
       let shop = existingShops[i] || Factory.create("shop");
       shops.push(shop);
@@ -267,7 +267,7 @@ faker.reaction.products = {
    * @returns {Object} first existing reaction product found or Factory created product
    */
   getProduct: function () {
-    const existingProduct = ReactionFactory.Collections.Products.findOne();
+    const existingProduct = Products.findOne();
     return existingProduct || Factory.create("product");
   },
 
@@ -278,7 +278,7 @@ faker.reaction.products = {
    */
   getProducts: function (limit = 2) {
     const products = [];
-    const existingProducts = ReactionFactory.Collections.Products.find({}, {limit: limit}).fetch();
+    const existingProducts = Products.find({}, {limit: limit}).fetch();
     for (let i = 0; i < limit; i = i + 1) {
       let product = existingProducts[i] || Factory.create("product");
       products.push(product);

@@ -44,6 +44,21 @@ Factory.define("shop", Shops, {
       }
     }
   },
+  baseUOM: "OZ",
+  unitsOfMeasure: [{
+    uom: "OZ",
+    label: "Ounces",
+    default: true
+  }, {
+    uom: "LB",
+    label: "Pounds"
+  }, {
+    uom: "GR",
+    label: "Grams"
+  }, {
+    uom: "KG",
+    label: "Kilograms"
+  }],
   layout: [{
     layout: "coreLayout",
     workflow: "coreLayout",
@@ -70,7 +85,6 @@ Factory.define("shop", Shops, {
   }],
   public: true,
   timezone: "US/Pacific",
-  baseUOM: "OZ",
   metafields: [],
   defaultRoles: ["guest", "account/profile"],
   createdAt: new Date,

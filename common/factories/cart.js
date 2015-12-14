@@ -13,7 +13,10 @@ Factory.define("cart", Cart, {
   ],
   shipping: [],
   billing: [],
-  state: "new",
+  workflow: {
+    status: "new",
+    workflow: []
+  },
   createdAt: faker.date.past(),
   updatedAt: new Date()
 });

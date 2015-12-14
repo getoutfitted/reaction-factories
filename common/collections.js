@@ -1,4 +1,6 @@
 // globals not exported from package
+Accounts = ReactionCore.Collections.Cart;
+
 Cart = ReactionCore.Collections.Cart;
 
 Discounts = ReactionCore.Collections.Discounts;

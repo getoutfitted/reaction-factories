@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Reaction Factories - reaction commerce specific factories with an extended faker implementation",
   name: "reactioncommerce:reaction-factories",
-  version: "0.3.2",
+  version: "0.3.3",
   git: "https://github.com/reactioncommerce/reaction-factories.git"
 });
 
@@ -18,7 +18,7 @@ Package.onUse(function (api) {
   api.use("momentjs:moment@2.10.6");
   api.use("dburles:factory@0.3.10");
   api.use("mquandalle:bower@1.5.2_1");
-  api.use("reactioncommerce:reaction-collections@1.0.1");
+  api.use("reactioncommerce:reaction-collections@1.0.2");
   // reaction faker tools
   api.addFiles("lib/faker.js", ["server"]);
   api.addFiles("lib/bower.json", "client");
@@ -26,8 +26,9 @@ Package.onUse(function (api) {
   api.addFiles("common/collections.js");
   // defines factories
   api.addFiles("common/factories/faker.js");
-  api.addFiles("common/factories/users.js");
   api.addFiles("common/factories/shops.js");
+  api.addFiles("common/factories/users.js");
+  api.addFiles("common/factories/accounts.js");
   api.addFiles("common/factories/products.js");
   api.addFiles("common/factories/cart.js");
   api.addFiles("common/factories/orders.js");

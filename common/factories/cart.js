@@ -4,7 +4,7 @@
 */
 Factory.define("cart", Cart, {
   shopId: faker.reaction.shops.getShop()._id,
-  userId: faker.reaction.users.getUser()._id,
+  userId: Factory.get("user"),
   sessionId: Random.id(),
   email: faker.internet.email(),
   items: [

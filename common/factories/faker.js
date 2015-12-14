@@ -219,13 +219,13 @@ faker.reaction.order = {
  */
 faker.reaction.shops = {
   getShop: function () {
-    const existingShop = Shops.findOne();
+    const existingShop = ReactionCore.Collections.Shops.findOne();
     return existingShop || Factory.create("shop");
   },
 
   getShops: function (limit = 2) {
     const shops = [];
-    const existingShops = Shops.find({}, {limit: limit}).fetch();
+    const existingShops = ReactionCore.Collections.Shops.find({}, {limit: limit}).fetch();
     for (let i = 0; i < limit; i = i + 1) {
       let shop = existingShops[i] || Factory.create("shop");
       shops.push(shop);

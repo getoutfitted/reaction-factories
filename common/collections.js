@@ -1,5 +1,5 @@
 // globals not exported from package
-Accounts = ReactionCore.Collections.Cart;
+Accounts = ReactionCore.Collections.Accounts;
 
 Cart = ReactionCore.Collections.Cart;
 

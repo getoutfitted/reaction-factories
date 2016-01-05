@@ -34,5 +34,5 @@ Package.onUse(function (api) {
   api.addFiles("common/factories/orders.js");
 
   api.imply("dburles:factory");
-  api.export("faker", ["server"]);
+  api.export("faker");
 });

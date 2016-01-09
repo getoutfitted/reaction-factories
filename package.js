@@ -10,7 +10,7 @@ Npm.depends({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom("METEOR@1.2");
+  api.versionsFrom("METEOR@1.2.1");
   api.use("mongo");
   api.use("random");
   api.use("underscore");

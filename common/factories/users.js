@@ -2,8 +2,7 @@
  * User Factory
  * @summary define user Factory
  */
-
-Factory.define("user", Meteor.users, {
+const user = {
   username: function () {
     return faker.internet.userName() + _.random(0, 1000);
   },
@@ -44,5 +43,42 @@ Factory.define("user", Meteor.users, {
   },
 
   createdAt: new Date()
+};
 
-});
+const registered = {
+  roles: {
+    [faker.reaction.shops.getShop()._id]: [
+      "guest",
+      "account/profile"
+    ]
+  },
+  services: {
+    password: {
+      bcrypt: Random.id(29)
+    },
+    resume: {
+      loginTokens: [
+        {
+          when: moment().add(_.random(0, 31), "days").add(_.random(0, 24),
+            "hours").toDate()
+        }
+      ]
+    }
+  }
+};
+
+const anonymous = {
+  roles: {
+    [faker.reaction.shops.getShop()._id]: [
+      "guest",
+      "anonymous"
+    ]
+  }
+};
+
+Factory.define("user", Meteor.users, user);
+
+Factory.define("registeredUser", Meteor.users,
+  Object.assign({}, user, registered));
+
+Factory.define("anonymous", Meteor.users, Object.assign({}, user, anonymous));

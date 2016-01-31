@@ -18,7 +18,7 @@ Package.onUse(function (api) {
   api.use("momentjs:moment@2.10.6");
   api.use("dburles:factory@0.3.10");
   api.use("mquandalle:bower@1.5.2_1");
-  api.use("reactioncommerce:reaction-collections@1.0.4");
+  api.use("reactioncommerce:reaction-collections@1.0.5");
   // reaction faker tools
   api.addFiles("lib/faker.js", ["server"]);
   api.addFiles("lib/bower.json", "client");
